@@ -1026,6 +1026,17 @@ h1 em,h2 em,h3 em{color:var(--gold-ink)}
 <div class="modal" id="modal" hidden role="dialog" aria-modal="true"></div>
 
 <script>
+/* Всегда открываем сайт сверху: без восстановления прокрутки и без якоря в адресе */
+try { history.scrollRestoration = "manual"; } catch (e) {}
+if (location.hash) { try { history.replaceState(null, "", location.pathname + location.search); } catch (e) {} }
+scrollTo(0, 0);
+addEventListener("pageshow", e => { if (e.persisted) scrollTo(0, 0); });
+document.addEventListener("click", e => {
+  const a = e.target.closest && e.target.closest('a[href^="#"]'); if (!a) return;
+  const id = a.getAttribute("href").slice(1); const t = id ? document.getElementById(id) : null;
+  e.preventDefault(); (t || document.body).scrollIntoView({ behavior: matchMedia("(prefers-reduced-motion: reduce)").matches ? "auto" : "smooth" });
+});
+
 /* ===================== НАСТРОЙКИ ===================== */
 const CONFIG = {
   whatsapp: "66995056726",          // номер WhatsApp без + и пробелов

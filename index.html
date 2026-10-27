@@ -2,6 +2,9 @@
 <title>GGG Pluxury Estate</title>
 <meta name="claude:viewport-fit-sides" content="cover">
 <meta name="description" content="GGG Pluxury Estate — премиальная недвижимость на Пхукете. Прямые продажи от застройщиков, лучшие цены на индивидуальных условиях, VIP-сопровождение.">
+<link rel="icon" href="favicon.ico" sizes="any">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;1,400;1,500&family=Tenor+Sans&family=Jost:wght@300;400;500&display=swap">
@@ -80,7 +83,7 @@ p{margin:0}
 .hdr .btn{padding:13px 20px;font-size:.68rem}
 .burger{display:none;background:none;border:0;padding:8px}
 @media (max-width:1080px){
-  .nav{position:fixed;inset:calc(84px + env(safe-area-inset-top,0px)) 0 auto 0;flex-direction:column;gap:0;background:var(--paper);color:var(--ink);padding:10px max(24px,env(safe-area-inset-left,0px)) 26px;transform:translateY(-140%);transition:transform .5s var(--ease);margin:0;box-shadow:0 20px 40px -20px rgba(0,0,0,.3)}
+  .nav{position:fixed;inset:calc(88px + env(safe-area-inset-top,0px)) 0 auto 0;flex-direction:column;gap:0;background:var(--paper);color:var(--ink);padding:10px max(24px,env(safe-area-inset-left,0px)) 26px;transform:translateY(-140%);transition:transform .5s var(--ease);margin:0;box-shadow:0 20px 40px -20px rgba(0,0,0,.3)}
   .nav.open{transform:none}
   .nav a{padding:16px 0;border-bottom:1px solid var(--line);font-size:.8rem}
   .burger{display:block}
@@ -672,6 +675,18 @@ h1 em,h2 em,h3 em{color:var(--gold-ink)}
 .mh{font-family:var(--f-display);font-size:1.15rem}
 .cform>.btn-gold{justify-self:stretch}
 .send.big .btn{padding:22px 30px;font-size:.82rem}
+
+/* ===== brand logos ===== */
+.logo img{display:block;height:54px;width:auto}
+.logo .lg-dark{display:none}
+.hdr.solid .logo .lg-gold{display:none}
+.hdr.solid .logo .lg-dark{display:block}
+.hdr .wrap{height:88px}
+@media (max-width:600px){.logo img{height:42px}}
+.logo-ftr img{height:78px}
+.intro-mark{width:150px;height:auto;opacity:0;transform:scale(.92);animation:markIn 1.1s var(--ease) .15s forwards}
+@keyframes markIn{to{opacity:1;transform:none}}
+.intro-logo span{display:none}
 @media (prefers-reduced-motion:reduce){
   .intro{display:none}.ch{opacity:1;transform:none;filter:none}
   .wpre .wd>span{transform:none}.ri.ripre::before{transform:scaleX(0)}.ri.ripre>img{transform:none}.ri.ripre>div{opacity:1}
@@ -694,7 +709,7 @@ h1 em,h2 em,h3 em{color:var(--gold-ink)}
 <div class="intro" id="intro" aria-hidden="true">
     <div class="intro-p ia"></div><div class="intro-p ib"></div>
     <div class="intro-logo">
-      <svg viewBox="0 0 120 120"><circle cx="60" cy="60" r="56" pathLength="1" class="dr"/><circle cx="60" cy="60" r="47" pathLength="1" class="dr d2"/><text x="60" y="69" text-anchor="middle">GGG</text></svg>
+      <img class="intro-mark" src="img/brand/classic-gold.svg" alt="" width="150" height="173">
       <span>Pluxury Estate · Phuket</span><i class="intro-bar"></i>
     </div>
   </div>
@@ -702,8 +717,7 @@ h1 em,h2 em,h3 em{color:var(--gold-ink)}
 <header class="hdr" id="hdr">
   <div class="wrap">
     <a href="#top" class="logo" aria-label="GGG Pluxury Estate">
-      <svg viewBox="0 0 44 44" aria-hidden="true"><circle cx="22" cy="22" r="21" fill="none" stroke="#B08D57" stroke-width=".8"/><circle cx="22" cy="22" r="17.5" fill="none" stroke="#B08D57" stroke-width=".4"/><text x="22" y="27" text-anchor="middle" font-family="Playfair Display,Georgia,serif" font-size="14" font-style="italic" fill="currentColor" letter-spacing="-1">GGG</text></svg>
-      <span class="logo-t"><b>Pluxury</b><span>Estate · Phuket</span></span>
+      <img class="lg-gold" src="img/brand/logo-gold.svg" alt="GGG Pluxury Estate" width="154" height="54"><img class="lg-dark" src="img/brand/logo-dark-gold.svg" alt="" width="154" height="54" aria-hidden="true">
     </a>
     <nav class="nav" id="nav">
       <a href="#approach" data-i18n="nav.approach">Подход</a>
@@ -1004,7 +1018,7 @@ h1 em,h2 em,h3 em{color:var(--gold-ink)}
     <p class="ftr-big" data-i18n="ft.big">Пхукет. <em>Индивидуально.</em></p>
     <div class="ftr-grid">
       <div style="display:grid;gap:18px;align-content:start">
-        <a href="#top" class="logo"><svg viewBox="0 0 44 44" aria-hidden="true"><circle cx="22" cy="22" r="21" fill="none" stroke="#B08D57" stroke-width=".8"/><circle cx="22" cy="22" r="17.5" fill="none" stroke="#B08D57" stroke-width=".4"/><text x="22" y="27" text-anchor="middle" font-family="Playfair Display,Georgia,serif" font-size="14" font-style="italic" fill="currentColor" letter-spacing="-1">GGG</text></svg><span class="logo-t"><b>Pluxury</b><span>Estate · Phuket</span></span></a>
+        <a href="#top" class="logo logo-ftr" aria-label="GGG Pluxury Estate"><img src="img/brand/logo-gold.svg" alt="GGG Pluxury Estate" width="220" height="77"></a>
         <p style="max-width:42ch;font-size:.95rem" data-i18n="ft.about">Премиальная недвижимость на Пхукете. Прямые продажи от застройщиков, индивидуальные условия и полное сопровождение.</p>
       </div>
       <div><h4 data-i18n="ft.nav">Разделы</h4><ul><li><a href="#catalog" data-i18n="nav.catalog">Объекты</a></li><li><a href="#phuket" data-i18n="nav.phuket">Пхукет</a></li><li><a href="#invest" data-i18n="nav.invest">Инвестиции</a></li><li><a href="#vip" data-i18n="nav.vip">Сервис</a></li></ul></div>
